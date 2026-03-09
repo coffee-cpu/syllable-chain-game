@@ -31,6 +31,8 @@ export interface PuzzleState {
   collectedSyllables: string[];
   displayOrder: ChainLink[];
   mistakes: number;
+  /** Mistakes on the current step (resets on advance) — used for auto-hint */
+  stepMistakes: number;
   hintsUsed: number;
   startedAt: number;
   status: 'playing' | 'completed';
@@ -41,6 +43,9 @@ export type PuzzleAction =
   | { type: 'SELECT_ROW'; selectedLeft: string }
   | { type: 'USE_HINT' }
   | { type: 'RESET' };
+
+/** Number of consecutive wrong taps on same step before auto-hint triggers */
+export const AUTO_HINT_THRESHOLD = 3;
 
 export interface LevelProgress {
   stars: number;

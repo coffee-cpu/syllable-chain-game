@@ -31,7 +31,7 @@ export function ResultScreen({ onReplay, onBackToLevels }: ResultScreenProps) {
   }, [markCompleted, state.puzzle.id, stars, state.mistakes]);
 
   return (
-    <div className="flex flex-col items-center gap-6 p-8 max-w-lg mx-auto text-center animate-celebrate">
+    <div className="flex flex-col items-center gap-6 p-8 max-w-lg mx-auto text-center animate-celebrate" role="main" aria-label={t('result.complete')}>
       <div className="text-4xl tracking-widest">
         {Array.from({ length: 3 }).map((_, i) => (
           <span key={i} className={i < stars ? 'opacity-100' : 'opacity-20'}>
@@ -53,7 +53,8 @@ export function ResultScreen({ onReplay, onBackToLevels }: ResultScreenProps) {
           type="button"
           onClick={onBackToLevels}
           className="px-6 py-3 rounded-xl border-2 border-gray-300 text-gray-700 font-medium
-            hover:border-indigo-300 hover:bg-gray-50 active:scale-95 transition-all"
+            hover:border-indigo-300 hover:bg-gray-50 active:scale-95 transition-all
+            focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
         >
           {t('result.backToLevels', 'Back to Levels')}
         </button>
@@ -61,7 +62,8 @@ export function ResultScreen({ onReplay, onBackToLevels }: ResultScreenProps) {
           type="button"
           onClick={onReplay}
           className="px-6 py-3 rounded-xl bg-indigo-600 text-white font-medium
-            hover:bg-indigo-700 active:scale-95 transition-all"
+            hover:bg-indigo-700 active:scale-95 transition-all
+            focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
         >
           {t('result.replay')}
         </button>

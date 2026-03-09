@@ -6,12 +6,14 @@ import { AnswerSlots } from '../puzzle/AnswerSlots.tsx';
 import { StartBanner } from '../puzzle/StartBanner.tsx';
 import { HintButton } from '../puzzle/HintButton.tsx';
 import { getDisplayableLinks } from '../../hooks/usePuzzle.ts';
+import { AUTO_HINT_THRESHOLD } from '../../types/index.ts';
 
 interface PuzzleScreenProps {
   onComplete: () => void;
+  onBackToLevels: () => void;
 }
 
-export function PuzzleScreen({ onComplete }: PuzzleScreenProps) {
+export function PuzzleScreen({ onComplete, onBackToLevels }: PuzzleScreenProps) {
   const { t } = useTranslation();
   const { state, selectRow, useHint, currentTarget, totalSteps } = useGame();
   const [feedback, setFeedback] = useState<{ type: 'correct' | 'wrong' | 'hint'; text: string } | null>(null);
@@ -29,6 +31,17 @@ export function PuzzleScreen({ onComplete }: PuzzleScreenProps) {
       return () => clearTimeout(timer);
     }
   }, [state.status, onComplete]);
+
+  // Auto-hint after repeated mistakes on the same step (free — doesn't count)
+  useEffect(() => {
+    if (state.stepMistakes >= AUTO_HINT_THRESHOLD && !showHint && state.status === 'playing') {
+      setShowHint(true);
+      setFeedback({
+        type: 'hint',
+        text: t('puzzle.hintText', { phrase: currentTarget }),
+      });
+    }
+  }, [state.stepMistakes, showHint, state.status, currentTarget, t]);
 
   const handleTap = useCallback(
     (left: string) => {
@@ -64,7 +77,16 @@ export function PuzzleScreen({ onComplete }: PuzzleScreenProps) {
   }, [useHint, currentTarget, t]);
 
   return (
-    <div className="flex flex-col gap-4 p-4 max-w-lg mx-auto">
+    <div className="flex flex-col gap-4 p-4 max-w-lg mx-auto" role="main" aria-label={state.puzzle.title}>
+      <button
+        type="button"
+        onClick={onBackToLevels}
+        className="self-start text-sm text-gray-500 hover:text-gray-700 transition-colors
+          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 rounded"
+        aria-label={t('result.backToLevels')}
+      >
+        {'\u2190'} {t('result.backToLevels')}
+      </button>
       <StartBanner
         phrase={state.puzzle.startPhrase}
         currentTarget={currentTarget}
@@ -77,27 +99,30 @@ export function PuzzleScreen({ onComplete }: PuzzleScreenProps) {
         collectedSyllables={state.collectedSyllables}
       />
 
-      {feedback && (
-        <div
-          className={`text-center text-sm font-medium px-3 py-2 rounded-lg transition-all ${
-            feedback.type === 'correct'
-              ? 'bg-green-100 text-green-700'
-              : feedback.type === 'wrong'
-                ? 'bg-red-100 text-red-700'
-                : 'bg-blue-100 text-blue-700'
-          }`}
-        >
-          {feedback.text}
-        </div>
-      )}
+      <div aria-live="polite" aria-atomic="true" className="min-h-[2.5rem]">
+        {feedback && (
+          <div
+            className={`text-center text-sm font-medium px-3 py-2 rounded-lg transition-all ${
+              feedback.type === 'correct'
+                ? 'bg-green-100 text-green-700'
+                : feedback.type === 'wrong'
+                  ? 'bg-red-100 text-red-700'
+                  : 'bg-blue-100 text-blue-700'
+            }`}
+          >
+            {feedback.text}
+          </div>
+        )}
+      </div>
 
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2" role="group" aria-label={t('puzzle.answerLabel')}>
         {state.displayOrder.map((link) => (
           <ChainRow
             key={link.left}
             link={link}
             solved={solvedLefts.has(link.left)}
             shaking={shakingRow === link.left}
+            highlighted={showHint && link.left === currentTarget}
             onTap={handleTap}
           />
         ))}

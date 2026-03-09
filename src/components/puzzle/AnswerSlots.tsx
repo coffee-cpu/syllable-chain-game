@@ -11,11 +11,11 @@ export function AnswerSlots({ wordLengths, collectedSyllables }: AnswerSlotsProp
   let letterIndex = 0;
 
   return (
-    <div className="space-y-2">
-      <div className="text-xs uppercase tracking-wide text-gray-400 text-center">
+    <div className="space-y-2" role="status" aria-label={t('puzzle.answerLabel')}>
+      <div className="text-xs uppercase tracking-wide text-gray-400 text-center" aria-hidden="true">
         {t('puzzle.answerLabel')}
       </div>
-      <div className="flex flex-wrap justify-center gap-3">
+      <div className="flex flex-wrap justify-center gap-3" aria-live="polite">
         {wordLengths.map((len, wordIdx) => (
           <div key={wordIdx} className="flex gap-0.5">
             {Array.from({ length: len }).map((_, charIdx) => {

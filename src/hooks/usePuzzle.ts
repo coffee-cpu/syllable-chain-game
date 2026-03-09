@@ -16,6 +16,7 @@ function puzzleReducer(state: PuzzleState, action: PuzzleAction): PuzzleState {
         collectedSyllables: [],
         displayOrder: shuffle(displayable),
         mistakes: 0,
+        stepMistakes: 0,
         hintsUsed: 0,
         startedAt: Date.now(),
         status: 'playing',
@@ -29,7 +30,7 @@ function puzzleReducer(state: PuzzleState, action: PuzzleAction): PuzzleState {
       if (!expectedLink) return state;
 
       if (action.selectedLeft !== expectedLink.left) {
-        return { ...state, mistakes: state.mistakes + 1 };
+        return { ...state, mistakes: state.mistakes + 1, stepMistakes: state.stepMistakes + 1 };
       }
 
       const newSyllables = [...state.collectedSyllables, expectedLink.syllable];
@@ -40,6 +41,7 @@ function puzzleReducer(state: PuzzleState, action: PuzzleAction): PuzzleState {
         ...state,
         currentStep: nextStep,
         collectedSyllables: newSyllables,
+        stepMistakes: 0,
         status: isComplete ? 'completed' : 'playing',
       };
     }
@@ -55,6 +57,7 @@ function puzzleReducer(state: PuzzleState, action: PuzzleAction): PuzzleState {
         collectedSyllables: [],
         displayOrder: shuffle(displayable),
         mistakes: 0,
+        stepMistakes: 0,
         hintsUsed: 0,
         startedAt: Date.now(),
         status: 'playing',
@@ -83,6 +86,7 @@ const initialState: PuzzleState = {
   collectedSyllables: [],
   displayOrder: [],
   mistakes: 0,
+  stepMistakes: 0,
   hintsUsed: 0,
   startedAt: 0,
   status: 'playing',

@@ -25,7 +25,8 @@
   "home": {
     "levelSelect": "Choose a Puzzle",
     "locked": "Locked",
-    "completed": "Completed"
+    "completed": "Completed",
+    "streak": "{{count}}-day streak!"
   },
   "packs": {
     "greetings": "Greetings",

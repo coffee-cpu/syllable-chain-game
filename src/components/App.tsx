@@ -38,7 +38,7 @@ function AppInner() {
     <div className="min-h-screen bg-gray-50">
       <Header />
       {screen === 'home' && <HomeScreen onSelectPuzzle={handleSelectPuzzle} />}
-      {screen === 'puzzle' && <PuzzleScreen onComplete={handleComplete} />}
+      {screen === 'puzzle' && <PuzzleScreen onComplete={handleComplete} onBackToLevels={handleBackToLevels} />}
       {screen === 'result' && (
         <ResultScreen onReplay={handleReplay} onBackToLevels={handleBackToLevels} />
       )}
