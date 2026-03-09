@@ -1,20 +1,37 @@
+import { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useGame } from '../../context/GameContext.tsx';
+import { useProgress } from '../../context/ProgressContext.tsx';
 import { calculateStars } from '../../lib/scoring.ts';
 
 interface ResultScreenProps {
   onReplay: () => void;
+  onBackToLevels: () => void;
 }
 
-export function ResultScreen({ onReplay }: ResultScreenProps) {
+export function ResultScreen({ onReplay, onBackToLevels }: ResultScreenProps) {
   const { t } = useTranslation();
   const { state } = useGame();
+  const { markCompleted } = useProgress();
+  const saved = useRef(false);
 
   const stars = calculateStars(state.mistakes, state.hintsUsed);
-  const starLabels = { 1: t('result.stars1'), 2: t('result.stars2'), 3: t('result.stars3') };
+  const starLabels: Record<number, string> = {
+    1: t('result.stars1'),
+    2: t('result.stars2'),
+    3: t('result.stars3'),
+  };
+
+  // Persist progress once when screen mounts
+  useEffect(() => {
+    if (!saved.current) {
+      saved.current = true;
+      markCompleted(state.puzzle.id, stars, state.mistakes);
+    }
+  }, [markCompleted, state.puzzle.id, stars, state.mistakes]);
 
   return (
-    <div className="flex flex-col items-center gap-6 p-8 max-w-lg mx-auto text-center">
+    <div className="flex flex-col items-center gap-6 p-8 max-w-lg mx-auto text-center animate-celebrate">
       <div className="text-4xl tracking-widest">
         {Array.from({ length: 3 }).map((_, i) => (
           <span key={i} className={i < stars ? 'opacity-100' : 'opacity-20'}>
@@ -32,6 +49,14 @@ export function ResultScreen({ onReplay }: ResultScreenProps) {
       <p className="text-green-600 font-medium">{t('result.complete')}</p>
 
       <div className="flex gap-3">
+        <button
+          type="button"
+          onClick={onBackToLevels}
+          className="px-6 py-3 rounded-xl border-2 border-gray-300 text-gray-700 font-medium
+            hover:border-indigo-300 hover:bg-gray-50 active:scale-95 transition-all"
+        >
+          {t('result.backToLevels', 'Back to Levels')}
+        </button>
         <button
           type="button"
           onClick={onReplay}

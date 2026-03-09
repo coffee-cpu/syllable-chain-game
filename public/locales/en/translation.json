@@ -30,7 +30,9 @@
   "packs": {
     "greetings": "Greetings",
     "animals": "Animals",
-    "food": "Food & Drink"
+    "food": "Food & Drink",
+    "wishes": "Well-Wishes",
+    "encouragement": "Encouragement"
   },
   "settings": {
     "language": "Language"

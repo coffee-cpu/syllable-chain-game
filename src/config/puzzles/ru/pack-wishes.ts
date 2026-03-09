@@ -1,0 +1,63 @@
+import type { PuzzlePack } from '../../../types/index.ts';
+
+export const ruWishes: PuzzlePack = {
+  id: 'ru-wishes',
+  titleKey: 'packs.wishes',
+  icon: '🌟',
+  puzzles: [
+    {
+      id: 'ru-wishes-good-day',
+      lang: 'ru',
+      pack: 'ru-wishes',
+      title: 'Удачного дня',
+      difficulty: 'medium',
+      answer: 'УДАЧНОГО ДНЯ',
+      wordLengths: [8, 3],
+      startPhrase: 'выходишь из дома',
+      chain: [
+        { left: 'выходишь из дома', syllable: 'УДА', right: 'солнечная погода', emojiLeft: '🚶', emojiRight: '☀️' },
+        { left: 'солнечная погода', syllable: 'ЧНО', right: 'впереди дела', emojiLeft: '☀️', emojiRight: '📋' },
+        { left: 'впереди дела', syllable: 'ГО', right: 'улыбка на лице', emojiLeft: '📋', emojiRight: '😊' },
+        { left: 'улыбка на лице', syllable: 'ДНЯ', right: 'машем рукой', emojiLeft: '😊', emojiRight: '👋' },
+        { left: 'машем рукой', syllable: '', right: 'выходишь из дома', emojiLeft: '👋', emojiRight: '🚶' },
+      ],
+    },
+    {
+      id: 'ru-wishes-safe-trip',
+      lang: 'ru',
+      pack: 'ru-wishes',
+      title: 'Счастливого пути',
+      difficulty: 'medium',
+      answer: 'СЧАСТЛИВОГО ПУТИ',
+      wordLengths: [11, 4],
+      startPhrase: 'собирать чемодан',
+      chain: [
+        { left: 'собирать чемодан', syllable: 'СЧАС', right: 'проверить билеты', emojiLeft: '🧳', emojiRight: '🎫' },
+        { left: 'проверить билеты', syllable: 'ТЛИ', right: 'сесть в поезд', emojiLeft: '🎫', emojiRight: '🚂' },
+        { left: 'сесть в поезд', syllable: 'ВО', right: 'смотреть в окно', emojiLeft: '🚂', emojiRight: '🪟' },
+        { left: 'смотреть в окно', syllable: 'ГО', right: 'новые города', emojiLeft: '🪟', emojiRight: '🏙️' },
+        { left: 'новые города', syllable: 'ПУ', right: 'долгожданный отдых', emojiLeft: '🏙️', emojiRight: '🏖️' },
+        { left: 'долгожданный отдых', syllable: 'ТИ', right: 'обнять друзей', emojiLeft: '🏖️', emojiRight: '🤗' },
+        { left: 'обнять друзей', syllable: '', right: 'собирать чемодан', emojiLeft: '🤗', emojiRight: '🧳' },
+      ],
+    },
+    {
+      id: 'ru-wishes-happy-birthday',
+      lang: 'ru',
+      pack: 'ru-wishes',
+      title: 'С днём рождения',
+      difficulty: 'medium',
+      answer: 'С ДНЁМ РОЖДЕНИЯ',
+      wordLengths: [1, 4, 8],
+      startPhrase: 'праздничный торт',
+      chain: [
+        { left: 'праздничный торт', syllable: 'С', right: 'зажечь свечи', emojiLeft: '🎂', emojiRight: '🕯️' },
+        { left: 'зажечь свечи', syllable: 'ДНЁМ', right: 'загадать желание', emojiLeft: '🕯️', emojiRight: '✨' },
+        { left: 'загадать желание', syllable: 'РОЖ', right: 'открыть подарки', emojiLeft: '✨', emojiRight: '🎁' },
+        { left: 'открыть подарки', syllable: 'ДЕ', right: 'весёлые друзья', emojiLeft: '🎁', emojiRight: '🥳' },
+        { left: 'весёлые друзья', syllable: 'НИЯ', right: 'яркие шарики', emojiLeft: '🥳', emojiRight: '🎈' },
+        { left: 'яркие шарики', syllable: '', right: 'праздничный торт', emojiLeft: '🎈', emojiRight: '🎂' },
+      ],
+    },
+  ],
+};

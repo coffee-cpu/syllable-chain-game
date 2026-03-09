@@ -1,5 +1,6 @@
 import { useState, useCallback } from 'react';
 import { GameProvider, useGame } from '../context/GameContext.tsx';
+import { ProgressProvider } from '../context/ProgressContext.tsx';
 import { Header } from './layout/Header.tsx';
 import { HomeScreen } from './screens/HomeScreen.tsx';
 import { PuzzleScreen } from './screens/PuzzleScreen.tsx';
@@ -29,20 +30,28 @@ function AppInner() {
     setScreen('puzzle');
   }, [reset]);
 
+  const handleBackToLevels = useCallback(() => {
+    setScreen('home');
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
       {screen === 'home' && <HomeScreen onSelectPuzzle={handleSelectPuzzle} />}
       {screen === 'puzzle' && <PuzzleScreen onComplete={handleComplete} />}
-      {screen === 'result' && <ResultScreen onReplay={handleReplay} />}
+      {screen === 'result' && (
+        <ResultScreen onReplay={handleReplay} onBackToLevels={handleBackToLevels} />
+      )}
     </div>
   );
 }
 
 export default function App() {
   return (
-    <GameProvider>
-      <AppInner />
-    </GameProvider>
+    <ProgressProvider>
+      <GameProvider>
+        <AppInner />
+      </GameProvider>
+    </ProgressProvider>
   );
 }
