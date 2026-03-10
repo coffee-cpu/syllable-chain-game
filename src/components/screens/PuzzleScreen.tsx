@@ -7,6 +7,8 @@ import { StartBanner } from '../puzzle/StartBanner.tsx';
 import { HintButton } from '../puzzle/HintButton.tsx';
 import { getDisplayableLinks } from '../../hooks/usePuzzle.ts';
 import { AUTO_HINT_THRESHOLD } from '../../types/index.ts';
+import confetti from 'canvas-confetti';
+import { initAudio, playCorrectSound, playWrongSound, playCompletionSound } from '../../lib/audio.ts';
 
 interface PuzzleScreenProps {
   onComplete: () => void;
@@ -27,7 +29,17 @@ export function PuzzleScreen({ onComplete, onBackToLevels }: PuzzleScreenProps) 
 
   useEffect(() => {
     if (state.status === 'completed') {
-      const timer = setTimeout(onComplete, 600);
+      playCompletionSound();
+
+      // A nice confetti burst in the middle of the screen
+      confetti({
+        particleCount: 150,
+        spread: 100,
+        origin: { y: 0.6 },
+        colors: ['#4F46E5', '#10B981', '#F59E0B', '#EF4444']
+      });
+
+      const timer = setTimeout(onComplete, 1200);
       return () => clearTimeout(timer);
     }
   }, [state.status, onComplete]);
@@ -44,7 +56,9 @@ export function PuzzleScreen({ onComplete, onBackToLevels }: PuzzleScreenProps) 
   }, [state.stepMistakes, showHint, state.status, currentTarget, t]);
 
   const handleTap = useCallback(
-    (left: string) => {
+    (left: string, e: React.MouseEvent<HTMLButtonElement>) => {
+      initAudio();
+
       if (state.status === 'completed') return;
       if (solvedLefts.has(left)) return;
 
@@ -53,11 +67,29 @@ export function PuzzleScreen({ onComplete, onBackToLevels }: PuzzleScreenProps) 
         selectRow(left);
         setShowHint(false);
         setFeedback({ type: 'correct', text: t('puzzle.correct') });
+
+        playCorrectSound();
+
+        // Minor local confetti for a specific button tap
+        const rect = e.currentTarget.getBoundingClientRect();
+        const x = (rect.left + rect.width / 2) / window.innerWidth;
+        const y = (rect.top + rect.height / 2) / window.innerHeight;
+
+        confetti({
+          particleCount: 20,
+          spread: 40,
+          origin: { x, y },
+          colors: ['#10B981', '#34D399'] // Greenish confetti
+        });
+
         setTimeout(() => setFeedback(null), 1200);
       } else {
         selectRow(left);
         setShakingRow(left);
         setFeedback({ type: 'wrong', text: t('puzzle.wrongRow') });
+
+        playWrongSound();
+
         setTimeout(() => {
           setShakingRow(null);
           setFeedback(null);

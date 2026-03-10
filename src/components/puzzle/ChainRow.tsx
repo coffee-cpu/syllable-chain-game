@@ -5,13 +5,13 @@ interface ChainRowProps {
   solved: boolean;
   shaking: boolean;
   highlighted: boolean;
-  onTap: (left: string) => void;
+  onTap: (left: string, e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 export function ChainRow({ link, solved, shaking, highlighted, onTap }: ChainRowProps) {
-  const handleClick = () => {
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     if (!solved) {
-      onTap(link.left);
+      onTap(link.left, e);
     }
   };
 
@@ -27,7 +27,7 @@ export function ChainRow({ link, solved, shaking, highlighted, onTap }: ChainRow
           w-full flex items-center gap-2 px-3 py-3 rounded-xl border-2 transition-all duration-200
           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2
           ${solved
-            ? 'bg-green-50 border-green-300 opacity-60 cursor-default'
+            ? 'bg-green-50 border-green-300 opacity-60 cursor-default animate-pop'
             : highlighted
               ? 'bg-blue-50 border-blue-400 shadow-md cursor-pointer active:scale-[0.98]'
               : 'bg-white border-gray-200 hover:border-blue-300 hover:shadow-md cursor-pointer active:scale-[0.98]'
