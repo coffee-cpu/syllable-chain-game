@@ -12,7 +12,6 @@ export const ruWishes: PuzzlePack = {
       title: 'Удачного дня',
       difficulty: 'medium',
       answer: 'УДАЧНОГО ДНЯ',
-      wordLengths: [8, 3],
       startPhrase: 'выходишь из дома',
       chain: [
         { left: 'выходишь из дома', syllable: 'УДА', right: 'солнечная погода', emojiLeft: '🚶', emojiRight: '☀️' },
@@ -28,7 +27,6 @@ export const ruWishes: PuzzlePack = {
       title: 'Счастливого пути',
       difficulty: 'medium',
       answer: 'СЧАСТЛИВОГО ПУТИ',
-      wordLengths: [11, 4],
       startPhrase: 'собирать чемодан',
       chain: [
         { left: 'собирать чемодан', syllable: 'СЧАС', right: 'проверить билеты', emojiLeft: '🧳', emojiRight: '🎫' },
@@ -46,7 +44,6 @@ export const ruWishes: PuzzlePack = {
       title: 'С днём рождения',
       difficulty: 'medium',
       answer: 'С ДНЁМ РОЖДЕНИЯ',
-      wordLengths: [1, 4, 8],
       startPhrase: 'праздничный торт',
       chain: [
         { left: 'праздничный торт', syllable: 'С', right: 'зажечь свечи', emojiLeft: '🎂', emojiRight: '🕯️' },

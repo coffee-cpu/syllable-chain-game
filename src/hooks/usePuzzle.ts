@@ -75,7 +75,6 @@ const emptyPuzzle: PuzzleConfig = {
   title: '',
   difficulty: 'easy',
   answer: '',
-  wordLengths: [],
   startPhrase: '',
   chain: [],
 };

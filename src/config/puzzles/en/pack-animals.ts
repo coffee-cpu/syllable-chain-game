@@ -12,7 +12,6 @@ export const enAnimals: PuzzlePack = {
       title: 'Butterfly',
       difficulty: 'easy',
       answer: 'BUTTERFLY',
-      wordLengths: [9],
       startPhrase: 'spring garden',
       chain: [
         { left: 'spring garden', syllable: 'BUT', right: 'colorful flowers', emojiLeft: '🌷', emojiRight: '🌸' },
@@ -27,7 +26,6 @@ export const enAnimals: PuzzlePack = {
       title: 'Elephant',
       difficulty: 'easy',
       answer: 'ELEPHANT',
-      wordLengths: [8],
       startPhrase: 'african safari',
       chain: [
         { left: 'african safari', syllable: 'EL', right: 'tall grass', emojiLeft: '🌍', emojiRight: '🌿' },

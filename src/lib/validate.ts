@@ -8,7 +8,7 @@ export interface ValidationError {
 
 export function validatePuzzle(puzzle: PuzzleConfig): ValidationError[] {
   const errors: ValidationError[] = [];
-  const { id, chain, startPhrase, answer, wordLengths } = puzzle;
+  const { id, chain, startPhrase, answer } = puzzle;
 
   // Rule 1: chain[0].left === startPhrase
   if (chain.length > 0 && chain[0].left !== startPhrase) {
@@ -38,26 +38,6 @@ export function validatePuzzle(puzzle: PuzzleConfig): ValidationError[] {
       puzzleId: id,
       rule: 'syllable-concat',
       message: `Syllables "${collected}" !== answer without spaces "${expected}"`,
-    });
-  }
-
-  // Rule 5: wordLengths sum matches answer length
-  const lengthSum = wordLengths.reduce((a, b) => a + b, 0);
-  if (lengthSum !== expected.length) {
-    errors.push({
-      puzzleId: id,
-      rule: 'word-lengths-sum',
-      message: `wordLengths sum ${lengthSum} !== answer length ${expected.length}`,
-    });
-  }
-
-  // Rule 6: wordLengths count matches word count
-  const wordCount = answer.split(/\s+/).length;
-  if (wordLengths.length !== wordCount) {
-    errors.push({
-      puzzleId: id,
-      rule: 'word-lengths-count',
-      message: `wordLengths.length ${wordLengths.length} !== word count ${wordCount}`,
     });
   }
 

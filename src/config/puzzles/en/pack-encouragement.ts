@@ -12,7 +12,6 @@ export const enEncouragement: PuzzlePack = {
       title: 'Happy Birthday',
       difficulty: 'medium',
       answer: 'HAPPY BIRTHDAY',
-      wordLengths: [5, 8],
       startPhrase: 'blow out candles',
       chain: [
         { left: 'blow out candles', syllable: 'HAP', right: 'make a wish', emojiLeft: '🕯️', emojiRight: '✨' },
@@ -29,7 +28,6 @@ export const enEncouragement: PuzzlePack = {
       title: 'Well Done',
       difficulty: 'medium',
       answer: 'WELL DONE',
-      wordLengths: [4, 4],
       startPhrase: 'finish the task',
       chain: [
         { left: 'finish the task', syllable: 'WE', right: 'thumbs up', emojiLeft: '📝', emojiRight: '👍' },
@@ -44,7 +42,6 @@ export const enEncouragement: PuzzlePack = {
       title: 'Good Luck Today',
       difficulty: 'medium',
       answer: 'GOOD LUCK TODAY',
-      wordLengths: [4, 4, 5],
       startPhrase: 'big day ahead',
       chain: [
         { left: 'big day ahead', syllable: 'GO', right: 'cross your fingers', emojiLeft: '📅', emojiRight: '🤞' },

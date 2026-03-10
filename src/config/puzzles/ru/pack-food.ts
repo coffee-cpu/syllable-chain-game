@@ -12,7 +12,6 @@ export const ruFood: PuzzlePack = {
       title: 'Приятного аппетита',
       difficulty: 'easy',
       answer: 'ПРИЯТНОГО АППЕТИТА',
-      wordLengths: [9, 8],
       startPhrase: 'накрыть на стол',
       chain: [
         { left: 'накрыть на стол', syllable: 'ПРИ', right: 'горячий суп', emojiLeft: '🍽️', emojiRight: '🍲' },
@@ -31,7 +30,6 @@ export const ruFood: PuzzlePack = {
       title: 'Вкусный завтрак',
       difficulty: 'easy',
       answer: 'ВКУСНЫЙ ЗАВТРАК',
-      wordLengths: [7, 7],
       startPhrase: 'утро на кухне',
       chain: [
         { left: 'утро на кухне', syllable: 'ВКУС', right: 'жарить яичницу', emojiLeft: '🌅', emojiRight: '🍳' },

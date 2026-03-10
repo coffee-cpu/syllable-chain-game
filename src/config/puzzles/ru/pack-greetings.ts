@@ -12,7 +12,6 @@ export const ruGreetings: PuzzlePack = {
       title: 'Доброе утро',
       difficulty: 'easy',
       answer: 'ДОБРОЕ УТРО',
-      wordLengths: [6, 4],
       startPhrase: 'рано проснулся',
       chain: [
         { left: 'рано проснулся', syllable: 'ДО', right: 'открыть глаза', emojiLeft: '🌅', emojiRight: '👀' },
@@ -31,7 +30,6 @@ export const ruGreetings: PuzzlePack = {
       title: 'Спокойной ночи',
       difficulty: 'easy',
       answer: 'СПОКОЙНОЙ НОЧИ',
-      wordLengths: [9, 4],
       startPhrase: 'пора спать',
       chain: [
         { left: 'пора спать', syllable: 'СПО', right: 'мягкая подушка', emojiLeft: '😴', emojiRight: '🛏️' },
@@ -47,7 +45,6 @@ export const ruGreetings: PuzzlePack = {
       title: 'Добро пожаловать',
       difficulty: 'easy',
       answer: 'ДОБРО ПОЖАЛОВАТЬ',
-      wordLengths: [5, 10],
       startPhrase: 'открытая дверь',
       chain: [
         { left: 'открытая дверь', syllable: 'ДОБ', right: 'тёплый приём', emojiLeft: '🚪', emojiRight: '🤗' },

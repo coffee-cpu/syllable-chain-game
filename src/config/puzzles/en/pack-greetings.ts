@@ -12,7 +12,6 @@ export const enGreetings: PuzzlePack = {
       title: 'Good Morning',
       difficulty: 'easy',
       answer: 'GOOD MORNING',
-      wordLengths: [4, 7],
       startPhrase: 'alarm clock rings',
       chain: [
         { left: 'alarm clock rings', syllable: 'GO', right: 'stretch and yawn', emojiLeft: '⏰', emojiRight: '🥱' },
@@ -28,7 +27,6 @@ export const enGreetings: PuzzlePack = {
       title: 'Sweet Dreams',
       difficulty: 'easy',
       answer: 'SWEET DREAMS',
-      wordLengths: [5, 6],
       startPhrase: 'bedtime story',
       chain: [
         { left: 'bedtime story', syllable: 'SWE', right: 'cozy blanket', emojiLeft: '📖', emojiRight: '🛏️' },
@@ -44,7 +42,6 @@ export const enGreetings: PuzzlePack = {
       title: 'Welcome Home',
       difficulty: 'easy',
       answer: 'WELCOME HOME',
-      wordLengths: [7, 4],
       startPhrase: 'open the door',
       chain: [
         { left: 'open the door', syllable: 'WEL', right: 'warm hugs', emojiLeft: '🚪', emojiRight: '🤗' },

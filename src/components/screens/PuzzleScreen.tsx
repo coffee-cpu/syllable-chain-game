@@ -95,20 +95,19 @@ export function PuzzleScreen({ onComplete, onBackToLevels }: PuzzleScreenProps) 
       />
 
       <AnswerSlots
-        wordLengths={state.puzzle.wordLengths}
+        answer={state.puzzle.answer}
         collectedSyllables={state.collectedSyllables}
       />
 
       <div aria-live="polite" aria-atomic="true" className="min-h-[2.5rem]">
         {feedback && (
           <div
-            className={`text-center text-sm font-medium px-3 py-2 rounded-lg transition-all ${
-              feedback.type === 'correct'
+            className={`text-center text-sm font-medium px-3 py-2 rounded-lg transition-all ${feedback.type === 'correct'
                 ? 'bg-green-100 text-green-700'
                 : feedback.type === 'wrong'
                   ? 'bg-red-100 text-red-700'
                   : 'bg-blue-100 text-blue-700'
-            }`}
+              }`}
           >
             {feedback.text}
           </div>

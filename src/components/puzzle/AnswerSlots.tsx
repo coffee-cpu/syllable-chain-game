@@ -1,11 +1,12 @@
 import { useTranslation } from 'react-i18next';
 
 interface AnswerSlotsProps {
-  wordLengths: number[];
+  answer: string;
   collectedSyllables: string[];
 }
 
-export function AnswerSlots({ wordLengths, collectedSyllables }: AnswerSlotsProps) {
+export function AnswerSlots({ answer, collectedSyllables }: AnswerSlotsProps) {
+  const wordLengths = answer.split(' ').map((word) => word.length);
   const { t } = useTranslation();
   const allLetters = collectedSyllables.join('');
   let letterIndex = 0;

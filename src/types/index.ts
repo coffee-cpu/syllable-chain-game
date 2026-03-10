@@ -13,7 +13,6 @@ export interface PuzzleConfig {
   title: string;
   difficulty: 'easy' | 'medium' | 'hard';
   answer: string;
-  wordLengths: number[];
   startPhrase: string;
   chain: ChainLink[];
 }
