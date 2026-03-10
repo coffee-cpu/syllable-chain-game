@@ -19,7 +19,6 @@ export const enGreetings: PuzzlePack = {
         { left: 'stretch and yawn', syllable: 'OD', right: 'brush your teeth', emojiLeft: '\u{1F971}', emojiRight: '\u{1FAA5}' },
         { left: 'brush your teeth', syllable: 'MOR', right: 'eat breakfast', emojiLeft: '\u{1FAA5}', emojiRight: '\u{1F95E}' },
         { left: 'eat breakfast', syllable: 'NING', right: 'open the curtains', emojiLeft: '\u{1F95E}', emojiRight: '\u{1FA9F}' },
-        { left: 'open the curtains', syllable: '', right: 'alarm clock rings', emojiLeft: '\u{1FA9F}', emojiRight: '\u{23F0}' },
       ],
     },
     {
@@ -36,7 +35,6 @@ export const enGreetings: PuzzlePack = {
         { left: 'cozy blanket', syllable: 'ET', right: 'close your eyes', emojiLeft: '🛏️', emojiRight: '😌' },
         { left: 'close your eyes', syllable: 'DRE', right: 'starry night', emojiLeft: '😌', emojiRight: '🌙' },
         { left: 'starry night', syllable: 'AMS', right: 'soft pillow', emojiLeft: '🌙', emojiRight: '💤' },
-        { left: 'soft pillow', syllable: '', right: 'bedtime story', emojiLeft: '💤', emojiRight: '📖' },
       ],
     },
     {
@@ -53,7 +51,6 @@ export const enGreetings: PuzzlePack = {
         { left: 'warm hugs', syllable: 'COME', right: 'family dinner', emojiLeft: '🤗', emojiRight: '🍽️' },
         { left: 'family dinner', syllable: 'HO', right: 'cozy fireplace', emojiLeft: '🍽️', emojiRight: '🔥' },
         { left: 'cozy fireplace', syllable: 'ME', right: 'happy together', emojiLeft: '🔥', emojiRight: '❤️' },
-        { left: 'happy together', syllable: '', right: 'open the door', emojiLeft: '❤️', emojiRight: '🚪' },
       ],
     },
   ],

@@ -30,15 +30,6 @@ export function validatePuzzle(puzzle: PuzzleConfig): ValidationError[] {
     }
   }
 
-  // Rule 3: loop closes
-  if (chain.length > 0 && chain[chain.length - 1].right !== chain[0].left) {
-    errors.push({
-      puzzleId: id,
-      rule: 'loop-closure',
-      message: `chain[last].right "${chain[chain.length - 1].right}" !== chain[0].left "${chain[0].left}"`,
-    });
-  }
-
   // Rule 4: syllables concatenate to answer (without spaces)
   const collected = chain.map((link) => link.syllable).join('');
   const expected = answer.replace(/\s/g, '');

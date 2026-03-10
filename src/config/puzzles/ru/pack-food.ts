@@ -22,7 +22,6 @@ export const ruFood: PuzzlePack = {
         { left: 'ароматный чай', syllable: 'АП', right: 'сладкий торт', emojiLeft: '☕', emojiRight: '🎂' },
         { left: 'сладкий торт', syllable: 'ПЕ', right: 'спелые фрукты', emojiLeft: '🎂', emojiRight: '🍎' },
         { left: 'спелые фрукты', syllable: 'ТИТА', right: 'полный живот', emojiLeft: '🍎', emojiRight: '😋' },
-        { left: 'полный живот', syllable: '', right: 'накрыть на стол', emojiLeft: '😋', emojiRight: '🍽️' },
       ],
     },
     {
@@ -40,7 +39,6 @@ export const ruFood: PuzzlePack = {
         { left: 'намазать масло', syllable: 'ЗАВ', right: 'налить молоко', emojiLeft: '🧈', emojiRight: '🥛' },
         { left: 'налить молоко', syllable: 'ТР', right: 'хрустящий тост', emojiLeft: '🥛', emojiRight: '🍞' },
         { left: 'хрустящий тост', syllable: 'АК', right: 'сытый и довольный', emojiLeft: '🍞', emojiRight: '😊' },
-        { left: 'сытый и довольный', syllable: '', right: 'утро на кухне', emojiLeft: '😊', emojiRight: '🌅' },
       ],
     },
   ],

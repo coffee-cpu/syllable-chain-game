@@ -17,7 +17,6 @@ const testPuzzle: PuzzleConfig = {
     { left: 'stretch and yawn', syllable: 'OD', right: 'brush your teeth' },
     { left: 'brush your teeth', syllable: 'MOR', right: 'eat breakfast' },
     { left: 'eat breakfast', syllable: 'NING', right: 'open the curtains' },
-    { left: 'open the curtains', syllable: '', right: 'alarm clock rings' },
   ],
 };
 
@@ -29,6 +28,7 @@ function initState(): PuzzleState {
     collectedSyllables: [],
     displayOrder: displayable, // no shuffle for testing
     mistakes: 0,
+    stepMistakes: 0,
     hintsUsed: 0,
     startedAt: Date.now(),
     status: 'playing',
@@ -36,10 +36,19 @@ function initState(): PuzzleState {
 }
 
 describe('getDisplayableLinks', () => {
-  it('filters out empty-syllable links', () => {
+  it('returns all links when none have empty syllables', () => {
     const links = getDisplayableLinks(testPuzzle.chain);
     expect(links).toHaveLength(4);
     expect(links.every((l) => l.syllable !== '')).toBe(true);
+  });
+
+  it('filters out empty-syllable links', () => {
+    const chainWithEmpty = [
+      ...testPuzzle.chain,
+      { left: 'extra', syllable: '', right: 'loop' },
+    ];
+    const links = getDisplayableLinks(chainWithEmpty);
+    expect(links).toHaveLength(4);
   });
 });
 

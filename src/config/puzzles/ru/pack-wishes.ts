@@ -19,7 +19,6 @@ export const ruWishes: PuzzlePack = {
         { left: 'солнечная погода', syllable: 'ЧНО', right: 'впереди дела', emojiLeft: '☀️', emojiRight: '📋' },
         { left: 'впереди дела', syllable: 'ГО', right: 'улыбка на лице', emojiLeft: '📋', emojiRight: '😊' },
         { left: 'улыбка на лице', syllable: 'ДНЯ', right: 'машем рукой', emojiLeft: '😊', emojiRight: '👋' },
-        { left: 'машем рукой', syllable: '', right: 'выходишь из дома', emojiLeft: '👋', emojiRight: '🚶' },
       ],
     },
     {
@@ -38,7 +37,6 @@ export const ruWishes: PuzzlePack = {
         { left: 'смотреть в окно', syllable: 'ГО', right: 'новые города', emojiLeft: '🪟', emojiRight: '🏙️' },
         { left: 'новые города', syllable: 'ПУ', right: 'долгожданный отдых', emojiLeft: '🏙️', emojiRight: '🏖️' },
         { left: 'долгожданный отдых', syllable: 'ТИ', right: 'обнять друзей', emojiLeft: '🏖️', emojiRight: '🤗' },
-        { left: 'обнять друзей', syllable: '', right: 'собирать чемодан', emojiLeft: '🤗', emojiRight: '🧳' },
       ],
     },
     {
@@ -56,7 +54,6 @@ export const ruWishes: PuzzlePack = {
         { left: 'загадать желание', syllable: 'РОЖ', right: 'открыть подарки', emojiLeft: '✨', emojiRight: '🎁' },
         { left: 'открыть подарки', syllable: 'ДЕ', right: 'весёлые друзья', emojiLeft: '🎁', emojiRight: '🥳' },
         { left: 'весёлые друзья', syllable: 'НИЯ', right: 'яркие шарики', emojiLeft: '🥳', emojiRight: '🎈' },
-        { left: 'яркие шарики', syllable: '', right: 'праздничный торт', emojiLeft: '🎈', emojiRight: '🎂' },
       ],
     },
   ],

@@ -22,7 +22,6 @@ export const ruGreetings: PuzzlePack = {
         { left: '\u043E\u0442\u043B\u0438\u0447\u043D\u043E\u0435 \u043D\u0430\u0441\u0442\u0440\u043E\u0435\u043D\u0438\u0435', syllable: '\u0423', right: '\u0441\u0432\u0435\u0442\u0438\u0442 \u0441\u043E\u043B\u043D\u0446\u0435', emojiLeft: '\u{1F60A}', emojiRight: '\u{2600}\u{FE0F}' },
         { left: '\u0441\u0432\u0435\u0442\u0438\u0442 \u0441\u043E\u043B\u043D\u0446\u0435', syllable: '\u0422', right: '\u0434\u0443\u0448\u0438\u0441\u0442\u043E\u0435 \u043C\u044B\u043B\u043E', emojiLeft: '\u{2600}\u{FE0F}', emojiRight: '\u{1F9FC}' },
         { left: '\u0434\u0443\u0448\u0438\u0441\u0442\u043E\u0435 \u043C\u044B\u043B\u043E', syllable: '\u0420\u041E', right: '\u0432\u0435\u0441\u0451\u043B\u0430\u044F \u0438\u0433\u0440\u0430', emojiLeft: '\u{1F9FC}', emojiRight: '\u{1F3AE}' },
-        { left: '\u0432\u0435\u0441\u0451\u043B\u0430\u044F \u0438\u0433\u0440\u0430', syllable: '', right: '\u0440\u0430\u043D\u043E \u043F\u0440\u043E\u0441\u043D\u0443\u043B\u0441\u044F', emojiLeft: '\u{1F3AE}', emojiRight: '\u{1F305}' },
       ],
     },
     {
@@ -39,7 +38,6 @@ export const ruGreetings: PuzzlePack = {
         { left: 'мягкая подушка', syllable: 'КОЙ', right: 'тёплое одеяло', emojiLeft: '🛏️', emojiRight: '🧸' },
         { left: 'тёплое одеяло', syllable: 'НОЙ', right: 'луна в окне', emojiLeft: '🧸', emojiRight: '🌙' },
         { left: 'луна в окне', syllable: 'НОЧИ', right: 'сладкие сны', emojiLeft: '🌙', emojiRight: '💤' },
-        { left: 'сладкие сны', syllable: '', right: 'пора спать', emojiLeft: '💤', emojiRight: '😴' },
       ],
     },
     {
@@ -57,7 +55,6 @@ export const ruGreetings: PuzzlePack = {
         { left: 'накрытый стол', syllable: 'ПО', right: 'уютный дом', emojiLeft: '🍽️', emojiRight: '🏠' },
         { left: 'уютный дом', syllable: 'ЖА', right: 'дорогие гости', emojiLeft: '🏠', emojiRight: '👨‍👩‍👧‍👦' },
         { left: 'дорогие гости', syllable: 'ЛОВАТЬ', right: 'радостная встреча', emojiLeft: '👨‍👩‍👧‍👦', emojiRight: '🎉' },
-        { left: 'радостная встреча', syllable: '', right: 'открытая дверь', emojiLeft: '🎉', emojiRight: '🚪' },
       ],
     },
   ],

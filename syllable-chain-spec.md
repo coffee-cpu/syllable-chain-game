@@ -142,8 +142,7 @@ interface PuzzleConfig {
   /**
    * Ordered chain of links. The player traverses these in order:
    * chain[0].left === startPhrase,
-   * chain[n].right === chain[n+1].left,
-   * chain[last].right === chain[0].left (loop closure).
+   * chain[n].right === chain[n+1].left.
    * Rows are displayed in shuffled order.
    */
   chain: ChainLink[];
@@ -167,12 +166,11 @@ Enforce these at test time (and optionally at dev startup) via Zod or a custom v
 
 1. `chain[0].left === startPhrase`
 2. For every consecutive pair: `chain[n].right === chain[n+1].left`
-3. `chain[last].right === chain[0].left` (loop closes)
-4. Concatenating all `chain[*].syllable` values equals `answer` with spaces removed
-5. `wordLengths` entries sum to `answer.replace(/\s/g, '').length`
-6. `wordLengths.length` equals the number of words in `answer`
-7. All `id` values are unique across all packs and languages
-8. No duplicate `left` values within a single puzzle (each row must be uniquely identifiable)
+3. Concatenating all `chain[*].syllable` values equals `answer` with spaces removed
+4. `wordLengths` entries sum to `answer.replace(/\s/g, '').length`
+5. `wordLengths.length` equals the number of words in `answer`
+6. All `id` values are unique across all packs and languages
+7. No duplicate `left` values within a single puzzle (each row must be uniquely identifiable)
 
 ### Example Config
 
@@ -203,7 +201,6 @@ export const ruGreetings: PuzzlePack = {
         { left: "отличное настроение", syllable: "у", right: "светит солнце", emojiLeft: "😊", emojiRight: "☀️" },
         { left: "светит солнце",   syllable: "т",  right: "душистое мыло",    emojiLeft: "☀️", emojiRight: "🧼" },
         { left: "душистое мыло",   syllable: "ро", right: "весёлая игра",     emojiLeft: "🧼", emojiRight: "🎮" },
-        { left: "весёлая игра",    syllable: "",   right: "рано проснулся",   emojiLeft: "🎮", emojiRight: "🌅" },
       ],
     },
     // ... more puzzles
@@ -211,7 +208,7 @@ export const ruGreetings: PuzzlePack = {
 };
 ```
 
-> **Note on loop-closing rows:** The original "Доброе утро" puzzle from the photo has a final row ("весёлая игра") that contributes no syllable but closes the loop. Configs allow empty `syllable` strings for such rows. **These rows should be omitted from the display entirely** — a row that does nothing when tapped is confusing, especially for younger players. The chain simply ends at the last syllable-bearing row. The loop closure exists in the config for validation purposes only.
+> **Note:** Chains do not need to form a loop. The chain ends at the last entry. Every row should contribute a syllable — empty-syllable rows are not needed.
 
 ---
 
@@ -405,12 +402,6 @@ These features add engagement but are lower priority than the core puzzle loop. 
 - **Tap correct row:** Row slides into "solved" state (faded, green left border, checkmark). Syllable animates into the next empty answer slot. Feedback text shows "Correct!" briefly, then shows the next target phrase.
 - **Tap wrong row:** Row flashes red briefly (shake animation). Feedback shows "Not that row!" message. Mistake counter increments. Row returns to normal state.
 - **Tap already-solved row:** No response (cursor: default, no hover effects).
-
-### Empty-Syllable Rows
-
-- Chain links with an empty `syllable` string (loop-closing rows) are **not displayed** in the puzzle grid
-- The puzzle auto-completes when the last syllable-bearing row is solved
-- These rows exist in the config only for validation (loop closure rule) and are filtered out at display time
 
 ### Hint System
 
