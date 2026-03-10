@@ -70,8 +70,8 @@ export function PuzzleScreen({ onComplete, onBackToLevels }: PuzzleScreenProps) 
         const y = (rect.top + rect.height / 2) / window.innerHeight;
 
         confetti({
-          particleCount: 20,
-          spread: 40,
+          particleCount: 8,
+          spread: 25,
           origin: { x, y },
           colors: ['#10B981', '#34D399'] // Greenish confetti
         });
