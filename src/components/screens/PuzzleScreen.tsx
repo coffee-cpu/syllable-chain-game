@@ -77,7 +77,7 @@ export function PuzzleScreen({ onComplete, onBackToLevels }: PuzzleScreenProps) 
   }, [useHint, currentTarget, t]);
 
   return (
-    <div className="flex flex-col gap-4 p-4 max-w-lg mx-auto" role="main" aria-label={state.puzzle.title}>
+    <div className="flex flex-col gap-4 px-8 md:px-12 py-4 max-w-lg mx-auto" role="main" aria-label={state.puzzle.title}>
       <button
         type="button"
         onClick={onBackToLevels}
@@ -103,10 +103,10 @@ export function PuzzleScreen({ onComplete, onBackToLevels }: PuzzleScreenProps) 
         {feedback && (
           <div
             className={`text-center text-sm font-medium px-3 py-2 rounded-lg transition-all ${feedback.type === 'correct'
-                ? 'bg-green-100 text-green-700'
-                : feedback.type === 'wrong'
-                  ? 'bg-red-100 text-red-700'
-                  : 'bg-blue-100 text-blue-700'
+              ? 'bg-green-100 text-green-700'
+              : feedback.type === 'wrong'
+                ? 'bg-red-100 text-red-700'
+                : 'bg-blue-100 text-blue-700'
               }`}
           >
             {feedback.text}

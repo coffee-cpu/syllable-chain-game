@@ -15,9 +15,9 @@ export function Header() {
         type="button"
         onClick={toggleLang}
         aria-label={`${t('settings.language')}: ${i18n.language === 'en' ? 'English' : 'Русский'}`}
-        className="px-3 py-1 text-sm rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors"
+        className="px-3 py-1 text-sm rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors uppercase"
       >
-        {i18n.language === 'en' ? 'RU' : 'EN'}
+        {i18n.language === 'en' ? 'EN' : 'RU'}
       </button>
     </header>
   );

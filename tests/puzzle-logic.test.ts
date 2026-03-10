@@ -10,7 +10,6 @@ const testPuzzle: PuzzleConfig = {
   title: 'Test',
   difficulty: 'easy',
   answer: 'GOOD MORNING',
-  wordLengths: [4, 7],
   startPhrase: 'alarm clock rings',
   chain: [
     { left: 'alarm clock rings', syllable: 'GO', right: 'stretch and yawn' },
