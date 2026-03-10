@@ -1,5 +1,7 @@
 # Syllable Chain Puzzle
 
+[🎮 Play the Interactive Demo!](https://coffee-cpu.github.io/syllable-chain-game/)
+
 An interactive educational puzzle app where players follow a chain of phrase pairs to collect syllables and decode a hidden message.
 
 ## Overview
