@@ -1,0 +1,41 @@
+{
+  "app": {
+    "title": "Decode the Phrase!",
+    "subtitle": "Follow the chain and collect the hidden message"
+  },
+  "puzzle": {
+    "startLabel": "Start of chain:",
+    "step": "Step {{current}} of {{total}}",
+    "answerLabel": "Hidden phrase:",
+    "hint": "Hint",
+    "hintText": "Look for on the left: \"{{phrase}}\"",
+    "correct": "Correct!",
+    "wrongRow": "Not that row! Look for the right phrase on the left side.",
+    "nextSearch": "Now look for: \"{{phrase}}\""
+  },
+  "result": {
+    "complete": "Well done! You decoded the phrase!",
+    "newPuzzle": "Next Puzzle",
+    "backToLevels": "Back to Levels",
+    "replay": "Play Again",
+    "stars1": "Completed!",
+    "stars2": "Great job!",
+    "stars3": "Perfect!"
+  },
+  "home": {
+    "levelSelect": "Choose a Puzzle",
+    "locked": "Locked",
+    "completed": "Completed",
+    "streak": "{{count}}-day streak!"
+  },
+  "packs": {
+    "greetings": "Greetings",
+    "animals": "Animals",
+    "food": "Food & Drink",
+    "wishes": "Well-Wishes",
+    "encouragement": "Encouragement"
+  },
+  "settings": {
+    "language": "Language"
+  }
+}
