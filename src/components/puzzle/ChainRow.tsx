@@ -52,11 +52,6 @@ export function ChainRow({ link, solved, shaking, highlighted, onTap }: ChainRow
         {link.emojiRight && <span className="text-xl shrink-0" aria-hidden="true">{link.emojiRight}</span>}
       </button>
 
-      {solved && (
-        <div className="absolute top-1/2 -right-10 -translate-y-1/2 flex items-center justify-center w-8" aria-hidden="true">
-          <span className="text-green-500 text-2xl font-bold">{'\u2713'}</span>
-        </div>
-      )}
     </div>
   );
 }
