@@ -99,10 +99,10 @@ export function HomeScreen({ onSelectPuzzle }: HomeScreenProps) {
                     role="listitem"
                     aria-label={
                       !unlocked
-                        ? `${puzzle.title} - ${t('home.locked')}`
+                        ? `${puzzle.startPhrase} - ${t('home.locked')}`
                         : progress?.completed
-                          ? `${puzzle.title} - ${progress.stars} stars`
-                          : puzzle.title
+                          ? `${puzzle.startPhrase} - ${progress.stars} stars`
+                          : puzzle.startPhrase
                     }
                     className={`w-full flex items-center px-4 py-3 rounded-xl border-2 transition-all
                       ${unlocked
@@ -112,7 +112,7 @@ export function HomeScreen({ onSelectPuzzle }: HomeScreenProps) {
                   >
                     {!unlocked && <span className="mr-2 text-gray-400" aria-hidden="true">&#128274;</span>}
                     <span className={`font-medium ${unlocked ? 'text-gray-800' : 'text-gray-400'}`}>
-                      {puzzle.title}
+                      {puzzle.startPhrase}
                     </span>
                     <span className="text-xs text-gray-400 ml-2">{puzzle.difficulty}</span>
                     {progress?.completed && <StarRating stars={progress.stars} />}
