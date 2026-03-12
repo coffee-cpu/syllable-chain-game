@@ -32,6 +32,22 @@ export const ruChickens: PuzzlePack = {
       ],
     },
     {
+      id: 'ru-chickens-kurinaya-noga',
+      lang: 'ru',
+      pack: 'ru-chickens',
+      title: 'Куриная нога',
+      answer: 'КУРИНАЯ НОГА',
+      startPhrase: 'бабушкин бульон',
+      chain: [
+        { left: 'бабушкин бульон', syllable: 'КУ', right: 'горячий суп', emojiLeft: '👵', emojiRight: '🍲' },
+        { left: 'горячий суп', syllable: 'РИ', right: 'золотистый отвар', emojiLeft: '🍲', emojiRight: '🥣' },
+        { left: 'золотистый отвар', syllable: 'НА', right: 'мясо с костью', emojiLeft: '🥣', emojiRight: '🍗' },
+        { left: 'мясо с костью', syllable: 'Я', right: 'деревенская кухня', emojiLeft: '🍗', emojiRight: '🏡' },
+        { left: 'деревенская кухня', syllable: 'НО', right: 'вкусное блюдо', emojiLeft: '🏡', emojiRight: '🍽️' },
+        { left: 'вкусное блюдо', syllable: 'ГА', right: 'обеденный стол', emojiLeft: '🍽️', emojiRight: '🪑' },
+      ],
+    },
+    {
       id: 'ru-chickens-grebeshok',
       lang: 'ru',
       pack: 'ru-chickens',
