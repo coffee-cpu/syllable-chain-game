@@ -4,6 +4,7 @@ import { ruFood } from './ru/pack-food.ts';
 import { ruWishes } from './ru/pack-wishes.ts';
 import { ruGeorgian } from './ru/pack-georgian.ts';
 import { ruAnimals } from './ru/pack-animals.ts';
+import { ruChickens } from './ru/pack-chickens.ts';
 import { enGreetings } from './en/pack-greetings.ts';
 import { enAnimals } from './en/pack-animals.ts';
 import { enEncouragement } from './en/pack-encouragement.ts';
@@ -14,6 +15,7 @@ export const allPacks: PuzzlePack[] = [
   ruWishes,
   ruGeorgian,
   ruAnimals,
+  ruChickens,
   enGreetings,
   enAnimals,
   enEncouragement,
