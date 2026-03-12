@@ -5,11 +5,11 @@ import { useProgress } from '../../context/ProgressContext.tsx';
 import { calculateStars } from '../../lib/scoring.ts';
 
 interface ResultScreenProps {
-  onReplay: () => void;
+  onNextLevel: () => void;
   onBackToLevels: () => void;
 }
 
-export function ResultScreen({ onReplay, onBackToLevels }: ResultScreenProps) {
+export function ResultScreen({ onNextLevel, onBackToLevels }: ResultScreenProps) {
   const { t } = useTranslation();
   const { state } = useGame();
   const { markCompleted } = useProgress();
@@ -60,12 +60,12 @@ export function ResultScreen({ onReplay, onBackToLevels }: ResultScreenProps) {
         </button>
         <button
           type="button"
-          onClick={onReplay}
+          onClick={onNextLevel}
           className="px-6 py-3 rounded-xl bg-indigo-600 text-white font-medium
             hover:bg-indigo-700 active:scale-95 transition-all
             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2"
         >
-          {t('result.replay')}
+          {t('result.nextLevel')}
         </button>
       </div>
     </div>
