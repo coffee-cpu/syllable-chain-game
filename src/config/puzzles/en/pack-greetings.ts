@@ -10,7 +10,6 @@ export const enGreetings: PuzzlePack = {
       lang: 'en',
       pack: 'en-greetings',
       title: 'Good Morning',
-      difficulty: 'easy',
       answer: 'GOOD MORNING',
       startPhrase: 'alarm clock rings',
       chain: [
@@ -25,7 +24,6 @@ export const enGreetings: PuzzlePack = {
       lang: 'en',
       pack: 'en-greetings',
       title: 'Sweet Dreams',
-      difficulty: 'easy',
       answer: 'SWEET DREAMS',
       startPhrase: 'bedtime story',
       chain: [
@@ -40,7 +38,6 @@ export const enGreetings: PuzzlePack = {
       lang: 'en',
       pack: 'en-greetings',
       title: 'Welcome Home',
-      difficulty: 'easy',
       answer: 'WELCOME HOME',
       startPhrase: 'open the door',
       chain: [

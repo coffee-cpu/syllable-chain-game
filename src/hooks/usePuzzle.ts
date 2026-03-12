@@ -73,7 +73,6 @@ const emptyPuzzle: PuzzleConfig = {
   lang: '',
   pack: '',
   title: '',
-  difficulty: 'easy',
   answer: '',
   startPhrase: '',
   chain: [],

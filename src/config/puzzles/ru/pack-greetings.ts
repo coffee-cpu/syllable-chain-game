@@ -10,7 +10,6 @@ export const ruGreetings: PuzzlePack = {
       lang: 'ru',
       pack: 'ru-greetings',
       title: 'Доброе утро',
-      difficulty: 'easy',
       answer: 'ДОБРОЕ УТРО',
       startPhrase: 'рано проснулся',
       chain: [
@@ -28,7 +27,6 @@ export const ruGreetings: PuzzlePack = {
       lang: 'ru',
       pack: 'ru-greetings',
       title: 'Спокойной ночи',
-      difficulty: 'easy',
       answer: 'СПОКОЙНОЙ НОЧИ',
       startPhrase: 'пора спать',
       chain: [
@@ -43,7 +41,6 @@ export const ruGreetings: PuzzlePack = {
       lang: 'ru',
       pack: 'ru-greetings',
       title: 'Добро пожаловать',
-      difficulty: 'easy',
       answer: 'ДОБРО ПОЖАЛОВАТЬ',
       startPhrase: 'открытая дверь',
       chain: [
