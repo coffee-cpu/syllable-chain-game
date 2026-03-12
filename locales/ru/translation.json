@@ -28,14 +28,6 @@
     "completed": "Пройдено",
     "streak": "{{count}}-дневная серия!"
   },
-  "packs": {
-    "greetings": "Приветствия",
-    "animals": "Животные",
-    "food": "Еда и напитки",
-    "wishes": "Пожелания",
-    "encouragement": "Поддержка",
-    "georgian": "Грузинская кухня"
-  },
   "settings": {
     "language": "Язык"
   }
