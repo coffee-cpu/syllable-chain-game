@@ -2,7 +2,7 @@ import type { PuzzlePack } from '../../../types/index.ts';
 
 export const enGreetings: PuzzlePack = {
   id: 'en-greetings',
-  titleKey: 'packs.greetings',
+  title: 'Greetings',
   icon: '👋',
   puzzles: [
     {

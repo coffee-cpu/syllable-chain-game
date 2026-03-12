@@ -28,14 +28,6 @@
     "completed": "Completed",
     "streak": "{{count}}-day streak!"
   },
-  "packs": {
-    "greetings": "Greetings",
-    "animals": "Animals",
-    "food": "Food & Drink",
-    "wishes": "Well-Wishes",
-    "encouragement": "Encouragement",
-    "georgian": "Georgian Cuisine"
-  },
   "settings": {
     "language": "Language"
   }
