@@ -10,7 +10,6 @@ export const ruFood: PuzzlePack = {
       lang: 'ru',
       pack: 'ru-food',
       title: 'Приятного аппетита',
-      difficulty: 'easy',
       answer: 'ПРИЯТНОГО АППЕТИТА',
       startPhrase: 'накрыть на стол',
       chain: [
@@ -28,7 +27,6 @@ export const ruFood: PuzzlePack = {
       lang: 'ru',
       pack: 'ru-food',
       title: 'Вкусный завтрак',
-      difficulty: 'easy',
       answer: 'ВКУСНЫЙ ЗАВТРАК',
       startPhrase: 'утро на кухне',
       chain: [

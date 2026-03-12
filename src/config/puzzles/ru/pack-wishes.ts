@@ -10,7 +10,6 @@ export const ruWishes: PuzzlePack = {
       lang: 'ru',
       pack: 'ru-wishes',
       title: 'Удачного дня',
-      difficulty: 'medium',
       answer: 'УДАЧНОГО ДНЯ',
       startPhrase: 'выходишь из дома',
       chain: [
@@ -25,7 +24,6 @@ export const ruWishes: PuzzlePack = {
       lang: 'ru',
       pack: 'ru-wishes',
       title: 'Счастливого пути',
-      difficulty: 'medium',
       answer: 'СЧАСТЛИВОГО ПУТИ',
       startPhrase: 'собирать чемодан',
       chain: [
@@ -42,7 +40,6 @@ export const ruWishes: PuzzlePack = {
       lang: 'ru',
       pack: 'ru-wishes',
       title: 'С днём рождения',
-      difficulty: 'medium',
       answer: 'С ДНЁМ РОЖДЕНИЯ',
       startPhrase: 'праздничный торт',
       chain: [

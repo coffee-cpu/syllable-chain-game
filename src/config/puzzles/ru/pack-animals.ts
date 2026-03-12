@@ -10,7 +10,6 @@ export const ruAnimals: PuzzlePack = {
       lang: 'ru',
       pack: 'ru-animals',
       title: 'Палочник',
-      difficulty: 'medium',
       answer: 'ПАЛОЧНИК',
       startPhrase: 'летний лес',
       chain: [

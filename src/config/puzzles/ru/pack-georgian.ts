@@ -10,7 +10,6 @@ export const ruGeorgian: PuzzlePack = {
       lang: 'ru',
       pack: 'ru-georgian',
       title: 'Хачапури',
-      difficulty: 'medium',
       answer: 'ХАЧАПУРИ',
       startPhrase: 'раскатать тесто',
       chain: [
@@ -25,7 +24,6 @@ export const ruGeorgian: PuzzlePack = {
       lang: 'ru',
       pack: 'ru-georgian',
       title: 'Хинкали',
-      difficulty: 'easy',
       answer: 'ХИНКАЛИ',
       startPhrase: 'замесить крутое тесто',
       chain: [

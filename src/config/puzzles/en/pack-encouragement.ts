@@ -10,7 +10,6 @@ export const enEncouragement: PuzzlePack = {
       lang: 'en',
       pack: 'en-encouragement',
       title: 'Happy Birthday',
-      difficulty: 'medium',
       answer: 'HAPPY BIRTHDAY',
       startPhrase: 'blow out candles',
       chain: [
@@ -26,7 +25,6 @@ export const enEncouragement: PuzzlePack = {
       lang: 'en',
       pack: 'en-encouragement',
       title: 'Well Done',
-      difficulty: 'medium',
       answer: 'WELL DONE',
       startPhrase: 'finish the task',
       chain: [
@@ -40,7 +38,6 @@ export const enEncouragement: PuzzlePack = {
       lang: 'en',
       pack: 'en-encouragement',
       title: 'Good Luck Today',
-      difficulty: 'medium',
       answer: 'GOOD LUCK TODAY',
       startPhrase: 'big day ahead',
       chain: [

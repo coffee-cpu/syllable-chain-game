@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import type { PuzzleConfig, PuzzlePack } from '../../types/index.ts';
 import { getPacksByLang } from '../../config/puzzles/index.ts';
 import { useProgress } from '../../context/ProgressContext.tsx';
+import { getDifficulty } from '../../lib/scoring.ts';
 
 interface HomeScreenProps {
   onSelectPuzzle: (puzzle: PuzzleConfig) => void;
@@ -48,7 +49,7 @@ function isPuzzleUnlocked(
 ): boolean {
   const puzzle = puzzles[puzzleIndex];
   // Easy puzzles and first puzzle are always unlocked
-  if (puzzle.difficulty === 'easy' || puzzleIndex === 0) return true;
+  if (getDifficulty(puzzle.chain.length) === 'easy' || puzzleIndex === 0) return true;
 
   // Check if any of the two preceding puzzles are completed
   for (let i = Math.max(0, puzzleIndex - 2); i < puzzleIndex; i++) {
@@ -114,7 +115,7 @@ export function HomeScreen({ onSelectPuzzle }: HomeScreenProps) {
                     <span className={`font-medium ${unlocked ? 'text-gray-800' : 'text-gray-400'}`}>
                       {puzzle.startPhrase}
                     </span>
-                    <span className="text-xs text-gray-400 ml-2">{puzzle.difficulty}</span>
+                    <span className="text-xs text-gray-400 ml-2">{getDifficulty(puzzle.chain.length)}</span>
                     {progress?.completed && <StarRating stars={progress.stars} />}
                   </button>
                 );

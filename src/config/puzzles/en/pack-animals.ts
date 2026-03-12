@@ -10,7 +10,6 @@ export const enAnimals: PuzzlePack = {
       lang: 'en',
       pack: 'en-animals',
       title: 'Butterfly',
-      difficulty: 'easy',
       answer: 'BUTTERFLY',
       startPhrase: 'spring garden',
       chain: [
@@ -24,7 +23,6 @@ export const enAnimals: PuzzlePack = {
       lang: 'en',
       pack: 'en-animals',
       title: 'Elephant',
-      difficulty: 'easy',
       answer: 'ELEPHANT',
       startPhrase: 'african safari',
       chain: [
