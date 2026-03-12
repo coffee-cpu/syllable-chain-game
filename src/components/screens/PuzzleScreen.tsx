@@ -17,7 +17,7 @@ interface PuzzleScreenProps {
 
 export function PuzzleScreen({ onComplete, onBackToLevels }: PuzzleScreenProps) {
   const { t } = useTranslation();
-  const { state, selectRow, useHint: applyHint, currentTarget, totalSteps } = useGame();
+  const { state, selectRow, useHint: applyHint, currentTarget } = useGame();
   const [shakingRow, setShakingRow] = useState<string | null>(null);
   const [showHint, setShowHint] = useState(false);
 
@@ -109,7 +109,6 @@ export function PuzzleScreen({ onComplete, onBackToLevels }: PuzzleScreenProps) 
         phrase={state.puzzle.startPhrase}
         currentTarget={currentTarget}
         currentStep={state.currentStep}
-        totalSteps={totalSteps}
       />
 
       <AnswerSlots
