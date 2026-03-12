@@ -8,7 +8,6 @@ const testPuzzle: PuzzleConfig = {
   lang: 'en',
   pack: 'test',
   title: 'Test',
-  difficulty: 'easy',
   answer: 'GOOD MORNING',
   startPhrase: 'alarm clock rings',
   chain: [
