@@ -4,17 +4,13 @@ interface StartBannerProps {
   phrase: string;
   currentTarget: string;
   currentStep: number;
-  totalSteps: number;
 }
 
-export function StartBanner({ phrase, currentTarget, currentStep, totalSteps }: StartBannerProps) {
+export function StartBanner({ phrase, currentTarget, currentStep }: StartBannerProps) {
   const { t } = useTranslation();
 
   return (
     <div className="text-center space-y-2">
-      <div className="text-sm text-gray-500">
-        {t('puzzle.step', { current: currentStep + 1, total: totalSteps })}
-      </div>
       <div className="bg-blue-50 border border-blue-200 rounded-xl px-4 py-3">
         <span className="text-xs uppercase tracking-wide text-blue-400 block mb-1">
           {t('puzzle.startLabel')}
