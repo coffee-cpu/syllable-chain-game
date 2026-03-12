@@ -2,7 +2,7 @@ import type { PuzzlePack } from '../../../types/index.ts';
 
 export const ruAnimals: PuzzlePack = {
   id: 'ru-animals',
-  titleKey: 'packs.animals',
+  title: 'Животные',
   icon: '🦋',
   puzzles: [
     {

@@ -2,7 +2,7 @@ import type { PuzzlePack } from '../../../types/index.ts';
 
 export const ruFood: PuzzlePack = {
   id: 'ru-food',
-  titleKey: 'packs.food',
+  title: 'Еда и напитки',
   icon: '🍽️',
   puzzles: [
     {

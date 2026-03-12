@@ -2,7 +2,7 @@ import type { PuzzlePack } from '../../../types/index.ts';
 
 export const ruWishes: PuzzlePack = {
   id: 'ru-wishes',
-  titleKey: 'packs.wishes',
+  title: 'Пожелания',
   icon: '🌟',
   puzzles: [
     {

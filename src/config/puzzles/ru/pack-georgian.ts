@@ -2,7 +2,7 @@ import type { PuzzlePack } from '../../../types/index.ts';
 
 export const ruGeorgian: PuzzlePack = {
   id: 'ru-georgian',
-  titleKey: 'packs.georgian',
+  title: 'Грузинская кухня',
   icon: '🇬🇪',
   puzzles: [
     {

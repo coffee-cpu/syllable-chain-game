@@ -80,9 +80,9 @@ export function HomeScreen({ onSelectPuzzle }: HomeScreenProps) {
         ).length;
 
         return (
-          <div key={pack.id} className="space-y-2" role="region" aria-label={t(pack.titleKey)}>
+          <div key={pack.id} className="space-y-2" role="region" aria-label={pack.title}>
             <h3 className="text-lg font-semibold text-gray-700">
-              {pack.icon} {t(pack.titleKey)}
+              {pack.icon} {pack.title}
             </h3>
             <PackProgressBar completed={completedCount} total={pack.puzzles.length} />
             <div className="flex flex-col gap-2" role="list">

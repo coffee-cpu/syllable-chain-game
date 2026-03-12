@@ -2,7 +2,7 @@ import type { PuzzlePack } from '../../../types/index.ts';
 
 export const enEncouragement: PuzzlePack = {
   id: 'en-encouragement',
-  titleKey: 'packs.encouragement',
+  title: 'Encouragement',
   icon: '🎉',
   puzzles: [
     {

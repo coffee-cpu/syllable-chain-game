@@ -19,7 +19,7 @@ export interface PuzzleConfig {
 
 export interface PuzzlePack {
   id: string;
-  titleKey: string;
+  title: string;
   icon: string;
   puzzles: PuzzleConfig[];
 }
