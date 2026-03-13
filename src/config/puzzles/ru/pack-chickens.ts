@@ -6,16 +6,17 @@ export const ruChickens: PuzzlePack = {
   icon: '🐔',
   puzzles: [
     {
-      id: 'ru-chickens-kuritsa',
+      id: 'ru-chickens-kurochka',
       lang: 'ru',
       pack: 'ru-chickens',
-      title: 'Курица',
-      answer: 'КУРИЦА',
+      title: 'Курочка',
+      answer: 'КУРОЧКА',
       startPhrase: 'птичий двор',
       chain: [
         { left: 'птичий двор', syllable: 'КУ', right: 'тёплый насест', emojiLeft: '🐓', emojiRight: '🪵' },
-        { left: 'тёплый насест', syllable: 'РИ', right: 'свежие яйца', emojiLeft: '🪵', emojiRight: '🥚' },
-        { left: 'свежие яйца', syllable: 'ЦА', right: 'деревенская ферма', emojiLeft: '🥚', emojiRight: '🌾' },
+        { left: 'тёплый насест', syllable: 'РО', right: 'золотое яйцо', emojiLeft: '🪵', emojiRight: '🥚' },
+        { left: 'золотое яйцо', syllable: 'Ч', right: 'пёстрые перья', emojiLeft: '🥚', emojiRight: '🪶' },
+        { left: 'пёстрые перья', syllable: 'КА', right: 'деревенская ферма', emojiLeft: '🪶', emojiRight: '🌾' },
       ],
     },
     {
