@@ -28,6 +28,31 @@
     "completed": "Completed",
     "streak": "{{count}}-day streak!"
   },
+  "help": {
+    "button": "Help",
+    "title": "How to Play",
+    "goal": "Your goal is to decode a hidden phrase by following a chain of clues.",
+    "steps": {
+      "title": "Step by step:",
+      "1": "You start with a phrase shown at the top of the screen.",
+      "2": "Find the row where the left side matches the current phrase and tap it.",
+      "3": "Each correct tap collects a syllable and reveals the next phrase to look for.",
+      "4": "Keep going until all syllables are collected — they spell out the hidden phrase!"
+    },
+    "hints": {
+      "title": "Tips:",
+      "1": "Use the Hint button if you get stuck — it highlights the correct row.",
+      "2": "After 3 wrong taps in a row, a free hint appears automatically.",
+      "3": "Fewer mistakes and hints = more stars!"
+    },
+    "scoring": {
+      "title": "Scoring:",
+      "stars3": "3 stars — no mistakes, no hints",
+      "stars2": "2 stars — up to 2 mistakes, up to 1 hint",
+      "stars1": "1 star — completed the puzzle"
+    },
+    "close": "Got it!"
+  },
   "settings": {
     "language": "Language"
   }
