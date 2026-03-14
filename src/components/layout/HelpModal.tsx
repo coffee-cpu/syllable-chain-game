@@ -30,13 +30,19 @@ export function HelpModal({ open, onClose }: HelpModalProps) {
     return () => dialog.removeEventListener('close', handleClose);
   }, [onClose]);
 
+  const handleBackdropClick = (e: React.MouseEvent<HTMLDialogElement>) => {
+    if (e.target === dialogRef.current) onClose();
+  };
+
   return (
     <dialog
       ref={dialogRef}
-      className="rounded-2xl shadow-xl max-w-md w-[calc(100%-2rem)] p-0 backdrop:bg-black/40"
+      onClick={handleBackdropClick}
+      className="rounded-2xl shadow-xl max-w-md w-[calc(100%-2rem)] p-0 backdrop:bg-black/40
+        max-h-[90dvh] flex flex-col"
       aria-label={t('help.title')}
     >
-      <div className="p-6 space-y-4 max-h-[80vh] overflow-y-auto">
+      <div className="p-6 space-y-4 overflow-y-auto flex-1">
         <h2 className="text-xl font-bold text-gray-800">{t('help.title')}</h2>
 
         <p className="text-gray-600">{t('help.goal')}</p>
