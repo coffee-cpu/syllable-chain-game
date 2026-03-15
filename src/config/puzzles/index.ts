@@ -9,6 +9,7 @@ import { ruNames } from './ru/pack-names.ts';
 import { enGreetings } from './en/pack-greetings.ts';
 import { enAnimals } from './en/pack-animals.ts';
 import { enEncouragement } from './en/pack-encouragement.ts';
+import { enHambledenHike } from './en/pack-hambleden-hike.ts';
 
 export const allPacks: PuzzlePack[] = [
   ruGreetings,
@@ -21,6 +22,7 @@ export const allPacks: PuzzlePack[] = [
   enGreetings,
   enAnimals,
   enEncouragement,
+  enHambledenHike,
 ];
 
 export function getPacksByLang(lang: string): PuzzlePack[] {
