@@ -38,8 +38,9 @@ export function HelpModal({ open, onClose }: HelpModalProps) {
     <dialog
       ref={dialogRef}
       onClick={handleBackdropClick}
-      className="rounded-2xl shadow-xl max-w-md w-[calc(100%-2rem)] p-0 backdrop:bg-black/40
-        max-h-[90dvh] flex flex-col"
+      className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 m-0
+        rounded-2xl shadow-xl max-w-md w-[calc(100%-2rem)] p-0 backdrop:bg-black/40
+        max-h-[90dvh] flex flex-col z-50"
       aria-label={t('help.title')}
     >
       <div className="p-6 space-y-4 overflow-y-auto flex-1">
