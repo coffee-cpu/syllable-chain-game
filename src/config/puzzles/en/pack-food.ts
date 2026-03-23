@@ -15,7 +15,8 @@ export const enFood: PuzzlePack = {
       startPhrase: 'tropical garden',
       chain: [
         { left: 'tropical garden', syllable: 'PAS', right: 'climbing vines', emojiLeft: '🌴', emojiRight: '🌿' },
-        { left: 'climbing vines', syllable: 'SION', right: 'sweet fragrance', emojiLeft: '🌿', emojiRight: '🌸' },
+        { left: 'climbing vines', syllable: 'SI', right: 'ripe on the vine', emojiLeft: '🌿', emojiRight: '🍇' },
+        { left: 'ripe on the vine', syllable: 'ON', right: 'sweet fragrance', emojiLeft: '🍇', emojiRight: '🌸' },
         { left: 'sweet fragrance', syllable: 'FRU', right: 'exotic juice', emojiLeft: '🌸', emojiRight: '🍹' },
         { left: 'exotic juice', syllable: 'IT', right: 'purple sunset', emojiLeft: '🍹', emojiRight: '🌅' },
       ],
