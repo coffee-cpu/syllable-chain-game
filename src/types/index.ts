@@ -11,6 +11,7 @@ export interface PuzzleConfig {
   lang: string;
   pack: string;
   title: string;
+  difficulty?: 'easy' | 'medium' | 'hard';
   answer: string;
   startPhrase: string;
   chain: ChainLink[];
