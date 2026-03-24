@@ -21,5 +21,20 @@ export const enFood: PuzzlePack = {
         { left: 'exotic juice', syllable: 'IT', right: 'purple sunset', emojiLeft: '🍹', emojiRight: '🌅' },
       ],
     },
+    {
+      id: 'en-food-cherries',
+      lang: 'en',
+      pack: 'en-food',
+      title: 'Cherries',
+      difficulty: 'easy',
+      answer: 'CHERRIES',
+      startPhrase: 'red orchard',
+      chain: [
+        { left: 'red orchard',     syllable: 'CH', right: 'stone fruit tree',  emojiLeft: '🌳', emojiRight: '🌲' },
+        { left: 'stone fruit tree', syllable: 'ER', right: 'ripe and sweet',   emojiLeft: '🌲', emojiRight: '🍒' },
+        { left: 'ripe and sweet',  syllable: 'RI',  right: 'summer picking',   emojiLeft: '🍒', emojiRight: '☀️' },
+        { left: 'summer picking',  syllable: 'ES',  right: 'cherry blossom',   emojiLeft: '☀️', emojiRight: '🌸' },
+      ],
+    },
   ],
 };
