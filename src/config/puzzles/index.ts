@@ -7,6 +7,7 @@ import { ruAnimals } from './ru/pack-animals.ts';
 import { ruChickens } from './ru/pack-chickens.ts';
 import { ruNames } from './ru/pack-names.ts';
 import { ruMoonPhases } from './ru/pack-moon-phases.ts';
+import { ruHolidays } from './ru/pack-holidays.ts';
 import { enGreetings } from './en/pack-greetings.ts';
 import { enAnimals } from './en/pack-animals.ts';
 import { enEncouragement } from './en/pack-encouragement.ts';
@@ -22,6 +23,7 @@ export const allPacks: PuzzlePack[] = [
   ruChickens,
   ruNames,
   ruMoonPhases,
+  ruHolidays,
   enGreetings,
   enAnimals,
   enEncouragement,
