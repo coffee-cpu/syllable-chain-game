@@ -10,7 +10,6 @@ export const enFood: PuzzlePack = {
       lang: 'en',
       pack: 'en-food',
       title: 'Passion Fruit',
-      difficulty: 'medium',
       answer: 'PASSION FRUIT',
       startPhrase: 'tropical garden',
       chain: [
@@ -26,7 +25,6 @@ export const enFood: PuzzlePack = {
       lang: 'en',
       pack: 'en-food',
       title: 'Cherries',
-      difficulty: 'easy',
       answer: 'CHERRIES',
       startPhrase: 'red orchard',
       chain: [

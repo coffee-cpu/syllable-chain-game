@@ -26,7 +26,6 @@ export const ruSpace: PuzzlePack = {
       lang: 'ru',
       pack: 'ru-space',
       title: 'Космонавт',         // human-readable title (original case)
-      difficulty: 'medium',       // 'easy' | 'medium' | 'hard'
       answer: 'КОСМОНАВТ',        // UPPERCASE, spaces preserved between words
       startPhrase: 'звёздное небо',  // must equal chain[0].left
       chain: [
