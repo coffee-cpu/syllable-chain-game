@@ -44,5 +44,21 @@ export const enPoetryFestival: PuzzlePack = {
         { left: 'happy faces', syllable: 'SE', right: 'flower bouquet', emojiLeft: '😄', emojiRight: '💐' },
       ],
     },
+    {
+      id: 'en-poetry-festival-poetry-festival',
+      lang: 'en',
+      pack: 'en-poetry-festival',
+      title: 'Poetry Festival',
+      answer: 'POETRY FESTIVAL',
+      startPhrase: 'school auditorium',
+      chain: [
+        { left: 'school auditorium', syllable: 'PO', right: 'decorated stage', emojiLeft: '🏫', emojiRight: '🎪' },
+        { left: 'decorated stage', syllable: 'ET', right: 'colorful banners', emojiLeft: '🎪', emojiRight: '🎏' },
+        { left: 'colorful banners', syllable: 'RY', right: 'rows of chairs', emojiLeft: '🎏', emojiRight: '💺' },
+        { left: 'rows of chairs', syllable: 'FES', right: 'excited children', emojiLeft: '💺', emojiRight: '🧒' },
+        { left: 'excited children', syllable: 'TI', right: 'proud teachers', emojiLeft: '🧒', emojiRight: '👩‍🏫' },
+        { left: 'proud teachers', syllable: 'VAL', right: 'thundering applause', emojiLeft: '👩‍🏫', emojiRight: '👏' },
+      ],
+    },
   ],
 };
